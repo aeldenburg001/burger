@@ -43,6 +43,7 @@ var orm = {
 
 	// Function that insert a single table entry
 	insertOne: function(table, cols, vals, cb) {
+
 		// Construct the query string that inserts a single row into the target table
 		var queryString = "INSERT INTO " + table;
 
@@ -52,8 +53,6 @@ var orm = {
 		queryString += "VALUES (";
 		queryString += printQuestionMarks(vals.length);
 		queryString += ") ";
-
-		// console.log(queryString);
 
 		// Perform the database query
 		connection.query(queryString, vals, function(err, result) {
@@ -68,7 +67,6 @@ var orm = {
 
 	// Function that updates a single table entry
 	updateOne: function(table, objColVals, condition, cb) {
-		// Construct the query string that updates a single entry in the target table
 		var queryString = "UPDATE " + table;
 
 		queryString += " SET ";
@@ -76,19 +74,15 @@ var orm = {
 		queryString += " WHERE ";
 		queryString += condition;
 
-		// console.log(queryString);
-
 		// Perform the database query
 		connection.query(queryString, function(err, result) {
 			if (err) {
 				throw err;
 			}
 
-			// Return results in callback
 			cb(result);
 		});
 	}
 };
 
-// Export the orm object for use in other modules
 module.exports = orm;
