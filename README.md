@@ -12,10 +12,6 @@
 
 ![JAWS_db](/public/images/jaws-db2.png)
 
-<p> Once I open the JAWS_db in mySQL Workbench however...</p>
-
-![JAWS_db](/public/images/jaws-db.png)
-
 <p> Heroku logs <p>
 
 ![Logs](/public/images/error.png)
