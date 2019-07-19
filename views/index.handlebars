@@ -1,16 +1,29 @@
-<h1>Eat-Da-Burger!</h1>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Burger Tracker App</h1>
+    <p class="lead"><!--This is a modified jumbotron that occupies the entire horizontal space of its parent.--></p>
+  </div>
+</div>
 
 <main>
   <div class="container">
     <div class="row">
       <div class="col s6">
+        
         {{#each burgers}}
           {{#unless this.devoured}}
-            <div>
+
+          
+
+      <div>
               <form action="/burgers/{{this.id}}?_method=PUT" method="POST">
                 <button type="submit" class='burgerAvailable'> {{this.burger_name}}</button>
               </form>
             </div>
+
+            
+
+            
           {{/unless}}
         {{/each}}
       </div>
@@ -18,11 +31,14 @@
       <div class="col s6">
         {{#each burgers}}
           {{#if this.devoured}}
-            <div class='burgerEaten'>
+
+      <div class='burgerEaten'>
               <div>
                 {{this.burger_name}}
               </div>
             </div>
+
+            
           {{/if}}
         {{/each}}
       </div>
@@ -30,12 +46,10 @@
   </div>
 </main>
 
-<h2>Add A Burger Option</h2>
-
-<div class="row">
-  <div class="col s12">
+    <div class="row">
+  <div class="col s12" class="addBurger">
     <form action="/burgers" method="POST">
-      <input type="text" id="name" name="burger_name" placeholder="Uber Delicious Burger">
+      <input type="text" id="name" name="burger_name" placeholder="Add A Burger">
       <button type="submit" class="addBurgerButton">Add The Burger</button>
     </form>
   </div>
