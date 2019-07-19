@@ -8,9 +8,10 @@
 
 ![Error](/public/images/error2.png)
 
+<p> I am having issues connecting JAWS_db. I have everything connected to mySQL, however, 
+
+![JAWS_db](/public/images/jaws-db.png)
+
 <p> Heroku logs <p>
 
 ![Logs](/public/images/error.png)
-
-<h2>Add A Burger Option</h2>
-
